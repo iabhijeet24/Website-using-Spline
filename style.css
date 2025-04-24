@@ -14,23 +14,10 @@ body {
   position: relative;
 }
 
-.shadow1 {
-  height: 10rem;
-  width: 10rem;
-  position: absolute;
-  top: 15%;
-  right: 0%;
-  box-shadow: 0 0 700px 15px white;
-  rotate: -20deg;
-  background-color: transparent;
-  background: transparent;
-  z-index: 1;
-}
-
 .hero-page {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .navbar {
@@ -41,6 +28,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: auto;
+  margin-top: 10px;
   
 }
 .logo-div {
@@ -51,11 +39,48 @@ body {
   font-style: normal;
 }
 
-.btn{
-    padding: 0.7rem 1.8rem;
-    margin: 0.8rem;
-    border-radius: 15px;
+.btn {
+  padding: 0.7rem 1.8rem;
+  margin: 0.8rem;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #111;
+  color: white;
+  border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
 }
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #00f, #f0f);
+  border-radius: 9px;
+  z-index: -2;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #111;
+  border-radius: 5px;
+  z-index: -1;
+}
+
 
 .hero-content{
     height: 60%;
@@ -80,43 +105,62 @@ body {
     margin-bottom: 20px;
 }
 
+
+
 #text-btn {
   width: 250px;
-  padding: 0.9rem 2rem;
+  padding: 0.7rem 2rem;
   background: #111;
   border: none;
   color: white;
+  cursor: pointer;
   border-radius: 30px;
   position: relative;
-  z-index: 10;
-  overflow: hidden; 
-}
-
-#text-btn::before,
-#text-btn::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 140%;
-  width: 140%;
-  border-radius: 30px;
   z-index: 1;
-  background-image: conic-gradient(transparent 10%, blue, transparent 90%);
+  overflow: hidden;
+  
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 #text-btn::before {
-  filter: blur(1.5rem);
-  opacity: 0.6;
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #00f, #f0f);
+  border-radius: 30px;
+  z-index: -1;
 }
 
-.spline-model{
+#text-btn::after {
+  content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px; 
-  height: 300px;
-  z-index: 1; 
-  pointer-events: none;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #111;
+  border-radius: 28px;
+  z-index: -1;
+}
+
+
+.spline-wrapper {
+  position: absolute;
+  top: -10%;
+  right: 3%;
+  width: 700px;
+  height: 700px;
+  z-index: 10;
+}
+
+.spline-wrapper spline-viewer {
+  width: 100%;
+  height: 100%;
 }
