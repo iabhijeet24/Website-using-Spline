@@ -1,0 +1,45 @@
+.container-section {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* centers by default */
+    padding: 10px;
+    gap: 20px;
+  }
+  
+  .box1, .box2 {
+    width: 90vw;
+    height: 70vh;
+    background-color: black;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    margin: 30px;
+  }
+  
+  .box1 {
+    align-self: flex-start;
+  }
+  
+  .box2 {
+    align-self: flex-end;
+  }
+  
+  .box1 h2, .box2 h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .box1 p, .box2 p {
+    font-size: 1.1rem;
+    color: #555;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  
